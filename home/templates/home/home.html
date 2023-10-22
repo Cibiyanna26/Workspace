@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+</head>
+<body class="bg-white">
+    <header class="">
+        <nav class="p-6 flex justify-between bg-gray-700">
+            <div>
+                <h1 class="text-3xl text-orange-500">Classroom <span class="text-rose-500">{{username}} !</span></h1>
+            </div>
+            <div>
+                <div class="flex">
+                    {% if request.user.is_authenticated %}
+                        <div class="plus" >   
+                            <button class="text-4xl text-white" onclick="option()">+</button>
+                            <div class="plus-sub">
+                                <a href="{% url 'join:join'  %}" class="two two-join">Join</a>
+                                <a href="{% url 'home:createclass'%}" class="two two-join">Create</a>
+                            </div>
+                        </div>
+                        
+                        <a href="#" class="m-3 text-xl text-orange-500">Completed</a>
+                        <a href="{% url 'home:logout' %}" class="m-3 text-xl text-orange-500">Logout</a>
+                    {% else %}
+                        <a href="{% url 'home:login' %}" class="m-3 text-xl text-orange-500">Login</a>
+                        <a href="{% url 'home:signup' %}" class="m-3 text-xl text-orange-500">SignUp</a>
+                    {% endif %}
+                    
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- classroom full work -->
+
+    <!-- <section class="display-all-class">
+        <div class="upper-div">
+            <div>
+                <div class="all-class-row">
+                    <div class="all-class-col">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <section class="show-all-class">
+        <div class="grid grid-cols-3 gap-10">
+            {% for class in classes %}
+            <div class="rounded-xl class-col">
+                <a href="{% url 'workhandling:task' class.id %}" class="">
+                    <div class="p-6 bg-gray-500 rounded-a-xl">
+                        <h2 class="text-2xl text-white class-col-anker">{{class.class_code}}</h2>
+                    </div>
+                </a>
+                <div class="bg-white p-4 class-col-obj rounded-b-xl" >
+                    <h2 class="text-3xl text-bold mb-10">{{class.class_name}}</h2>
+                    <p class="text-xl text-bold">{{class.About}}</p>
+                </div>
+            </div>
+            {% endfor %}    
+        </div>
+    </section>
+    
+    <script src="{% static 'javascripts/home.js' %}"></script>
+</body>
+</html>

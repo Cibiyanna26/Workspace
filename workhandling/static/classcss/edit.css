@@ -1,0 +1,20 @@
+.upper-edit-section{
+    width: 100%;
+}
+
+
+
+
+.mid-div{
+    width: 60%;
+    margin: auto;
+    padding: 1rem;
+}
+
+form input{
+    display: block;
+}
+
+.edit-input{
+    width: 100%;
+}

@@ -1,0 +1,44 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.plus{
+    position: relative;
+    margin-right: 1rem;
+}
+
+.plus-sub{
+    position: absolute;
+    bottom: -5rem;
+    background: rgb(78, 195, 238);
+    display: none;
+    border-radius: 16px;
+}
+
+.two{
+    display: block;
+    padding: .5rem 1rem;
+    font-size: 1.2rem !important;
+}
+
+.two:hover{
+    color: gray;
+}
+
+.show-all-class{
+    padding: 1rem;
+}
+
+.class-col{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+}
+
+.class-col-anker{
+    display: inline;
+}
+
+.class-col-anker:hover{
+    border-bottom: 3px solid white;
+}

@@ -1,0 +1,132 @@
+
+
+.work-nav{
+    padding:  2.75rem 3rem;
+}
+
+
+
+/* classroom part */
+
+.classroom-section{
+    width: 100%;
+
+}
+
+.classroom-top-div{
+    width: 70%;
+    margin: auto;
+    padding-top: 2rem;
+}
+
+.design-class{
+    padding: 7rem 0;
+    border-radius: 16px;
+    position: relative;
+    background-image: url(../image/books-1845614_1280.jpg);
+}
+
+.class-design-title{
+    position: absolute;
+    bottom:20%;
+    left: 10px;
+    color:black;
+}
+
+.class-design-subtitle{
+    position: absolute;
+    bottom:5%;
+    left: 15px;
+    color: black;
+}
+
+.classroom-work-form-div{
+    padding: 2rem 1rem 2rem 1rem;
+    border-radius: 16px;
+}
+
+.classroom-work-form-div form label{
+    display: block;
+}
+
+
+form .announcement{
+    width: 80%;
+    padding: .5rem;
+    font-size: large;   
+    border-bottom: 1px solid rgb(7, 7, 93) ;
+    transform: translateX(3%);
+    
+}
+
+form .announcement:focus{   
+    outline: 0;
+    border-bottom: 3px solid rgb(8, 2, 111);
+}
+
+
+/* task showing part */
+
+
+
+.task-allocated-row{
+    display: flex;
+}
+
+
+
+.task-col1{
+    width: 30%;
+    padding: 1rem;
+    height: 50%;
+}
+
+.task-col1 div{
+    line-height: 3;
+}
+
+.task-col2{
+    width: 70%;
+}
+
+.task-col2 .substitute-div{
+    margin: 1rem;
+    padding: .1rem;
+}
+
+.task-col2 img{
+    width: 7%;
+    height: 7%;
+}
+
+.all-task-assigned{
+    border: 1px solid gray; 
+    border-radius: 16px;
+    margin-top: 1rem;
+}
+
+
+
+
+.all-task-assigned .specific-task{
+    display: flex;
+    justify-content: space-between;
+    padding: .8rem;
+}
+
+.three-dot{
+    position: relative !important;
+}
+
+
+.option{
+    position: absolute;
+    border: 1px solid black;
+    right: -6rem;
+    top: -0.5rem;
+}
+
+.option a{
+    display: block;
+}
+
